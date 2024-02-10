@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css">
+    <script src="script.js"></script>
+    <title>Liefernando</title>
+  </head>
+  <body onload="renderMenus(); renderCart()">
+    <div class="center">
+      <header>
+        <div class="logo-div">
+          <img class="utensils-icon" src="icon/utensils.svg" alt="" />
+          <span></span>
+          <a href="index.html" class="logo"><b>Liefernando</b>.de</a>
+        </div>
+      </header>
+      <div id="cartIconDiv">
+        <img id="cartIcon" onclick="cartIcon()" src="icon/cart-false.svg" alt="">
+      </div>
+      <section id="menusId"></section>
+      <section class="d-none-cart" id="cart">
+        <div class="cart">
+          <div class="cart-title-div">
+            <span class="cart-title">Warenkorb</span>
+          </div>
+          <div id="productsInCart"></div>
+          <div id="check">
+            <div class="check-title-div">
+              <span>Zwischensumme</span>
+              <span>Lieferkosten</span>
+              <span>Gesamt</span>
+            </div>
+            <div class="check-costs-div">
+              <span id="subtotal"></span>
+              <span id="delivery"></span>
+              <span id="total"></span>
+            </div>
+          </div>
+          <div class="btn-div">
+            <button onclick="openOrderedSection()" id="cartBtn" class="grey-btn">
+              BESTELLEN
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="ordered" class="ordered d-none">
+        <a class="a-ordered" href="index.html">
+          <div class="ordered-div">
+            <span class="ordered-span">Vielen Dank!<br>Deine <b class="b">B</b>estellung wird nun bearbeitet :D</span>
+          </div>
+        </a>
+      </section>
+      <footer>
+        <div class="footer-div">
+          <a class="a-footer" href="imprint.html">Impressum</a>
+          <a href="index.html"><img class="utensils-icon-footer" src="icon/utensils.svg" alt=""></a>
+          <a class="a-footer" href="dataParticipation.html">Datenschutzerklärung</a>
+        </div>
+      </footer>
+    </div>
+  </body>    
+</html>
